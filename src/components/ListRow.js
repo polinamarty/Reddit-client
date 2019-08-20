@@ -14,10 +14,10 @@ export default class ListRow extends Component {
   }
 
   render() {
-    const backgroundColor = this.props.selected ? '#c0f0ff' : '#fff';
+    const backgroundColor = this.props.selected ? 'red' : 'black';
     return (
       <div
-        style={{ backgroundColor }}
+        style={{backgroundColor}}
         onClick={this.onClick}>
         {this.props.children}
       </div>

@@ -6,7 +6,7 @@
 import React, { Component } from 'react';
 import autoBind from 'react-autobind';
 import { connect } from 'react-redux';
-import './TopicsScreen.css';
+import './TopicsScreen.scss';
 import * as topicsActions from '../store/topics/actions';
 import * as topicsSelectors from '../store/topics/reducer';
 import ListView from '../components/ListView';
@@ -27,7 +27,10 @@ class TopicsScreen extends Component {
     if (!this.props.topicsByUrl) return this.renderLoading();
     return (
       <div className="TopicsScreen">
-        <h3>Choose 3 topics of interest</h3>
+        <div className="Box">
+          <h1 className="Glitch">Choose 3 topics of interest</h1>
+        </div>
+
         <ListView
           rowsIdArray={this.props.topicsUrlArray}
           rowsById={this.props.topicsByUrl}
@@ -47,13 +50,16 @@ class TopicsScreen extends Component {
 
   renderRow(topicUrl, topic) {
     const selected = this.props.selectedTopicsByUrl[topicUrl];
+
+    const color = selected ? 'black' : 'white';
+
     return (
       <ListRow
         rowId={topicUrl}
         onClick={this.onRowClick}
         selected={selected}>
-        <h3>{topic.title}</h3>
-        <p>{topic.description}</p>
+        <h3 style={{color}}>{topic.title}</h3>
+        <p style={{color}}>{topic.description}</p>
       </ListRow>
     )
   }

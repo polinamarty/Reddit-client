@@ -6,7 +6,7 @@
 import React, { Component } from 'react';
 import autoBind from 'react-autobind';
 import { connect } from 'react-redux';
-import './PostsScreen.css';
+import './PostsScreen.scss';
 import * as postsActions from '../store/posts/actions';
 import * as postsSelectors from '../store/posts/reducer';
 import * as topicsSelectors from '../store/topics/reducer';
@@ -63,6 +63,8 @@ class PostsScreen extends Component {
 
   renderRow(postId, post) {
     const selected = this.props.currentPost === post;
+    const color = selected ? 'black' : 'white';
+
     return (
       <ListRow
         rowId={postId}
@@ -71,7 +73,7 @@ class PostsScreen extends Component {
         {!post.thumbnail ? false :
           <img className="thumbnail" src={post.thumbnail} alt="thumbnail" />
         }
-        <h3>{post.title}</h3>
+        <h3 style={{color}}>{post.title}</h3>
       </ListRow>
     )
   }

@@ -1,0 +1,101 @@
+//colors
+$color_silver_chalice_approx: #aaa;
+
+//urls
+$url_0: url(../../img/right-arrow.png);
+
+.TopicsScreen {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+
+	ul {
+		list-style: none;
+		padding-left: 0;
+		width: 640px;
+		margin: auto;
+		border: 1px solid $color_silver_chalice_approx;
+	}
+	li {
+		text-align: left;
+		border-bottom: 1px solid $color_silver_chalice_approx;
+		cursor: pointer;
+		> div {
+			padding-left: 20px;
+		}
+		h3 {
+			padding: 10px 0 0;
+			margin: 0;
+		}
+		p {
+			padding: 10px 0;
+			margin: 0;
+		}
+	}
+}
+.NextScreen {
+	position: fixed;
+	top: 50%;
+	right: calc((100vw - 640px)/2 - 90px);
+	background: $url_0;
+	background-size: 40px 40px;
+	width: 40px;
+	height: 40px;
+	border: 0;
+	cursor: pointer;
+	outline: none;
+}
+
+.TopicsScreen .Box {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+}
+
+.TopicsScreen .Box .Glitch {
+	color:#fff;
+		 font-family: 'Poppins', sans-serif;
+		 font-weight: 600;
+		 font-size:50px;
+		 position: relative;
+		 padding:30px;
+		 white-space: nowrap;
+		 &:before, &:after {
+				content:'Choose';
+				color:#fff;
+				position: absolute;
+				top:0;
+				overflow:hidden;
+				padding:30px;
+				white-space: nowrap;
+		 }
+		 &:before {
+				left:3px;
+				text-shadow: -3px 0 red;
+				animation: glitch-before 2s linear 0s infinite alternate;
+		 }
+		 &:after {
+				left:-3px;
+				text-shadow: -3px 0 blue;
+				animation: glitch-after 2s linear 0s infinite alternate;
+		 }
+}
+
+@keyframes glitch-before {
+   $steps: 20;
+   @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+         clip: rect(random(150)+px, 350px, random(150)+px, 30px)
+      }
+   }
+}
+
+@keyframes glitch-after {
+   $steps: 20;
+   @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+         clip: rect(random(150)+px, 350px, random(150)+px, 30px)
+      }
+   }
+}
