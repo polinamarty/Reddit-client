@@ -38,7 +38,7 @@ class PostsScreen extends Component {
             selected={this.props.currentFilter}
             onChanged={this.onFilterChanged}
             />
-            </div>
+        </div>
           <ListView
             rowsIdArray={this.props.postsIdArray}
             rowsById={this.props.postsById}
