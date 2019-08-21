@@ -27,10 +27,7 @@ class TopicsScreen extends Component {
     if (!this.props.topicsByUrl) return this.renderLoading();
     return (
       <div className="TopicsScreen">
-        <div className="Box">
-          <h1 className="Glitch">Choose topics</h1>
-        </div>
-
+        <h1>Choose topics</h1>
         <ListView
           rowsIdArray={this.props.topicsUrlArray}
           rowsById={this.props.topicsByUrl}
