@@ -18,7 +18,7 @@ export default class TopicFilter extends Component {
   }
 
   renderFilter(id, label) {
-    const className = this.props.selected === id ? 'selected' : undefined;
+    const className = this.props.selected === id ? 'selected' : 'unselected';
     return (
       <a
         key={id}

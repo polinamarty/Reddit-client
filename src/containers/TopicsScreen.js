@@ -28,7 +28,7 @@ class TopicsScreen extends Component {
     return (
       <div className="TopicsScreen">
         <div className="Box">
-          <h1 className="Glitch">Choose 3 topics of interest</h1>
+          <h1 className="Glitch">Choose topics</h1>
         </div>
 
         <ListView
@@ -51,7 +51,7 @@ class TopicsScreen extends Component {
   renderRow(topicUrl, topic) {
     const selected = this.props.selectedTopicsByUrl[topicUrl];
 
-    const color = selected ? 'black' : 'white';
+    const color =  'white';
 
     return (
       <ListRow

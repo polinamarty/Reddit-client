@@ -14,7 +14,7 @@ export default class ListRow extends Component {
   }
 
   render() {
-    const backgroundColor = this.props.selected ? 'red' : 'black';
+    const backgroundColor = this.props.selected ? '#fc0f47' : '#202020';
     return (
       <div
         style={{backgroundColor}}

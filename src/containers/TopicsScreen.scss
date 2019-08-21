@@ -56,13 +56,13 @@ $url_0: url(../../img/right-arrow.png);
 .TopicsScreen .Box .Glitch {
 	color:#fff;
 		 font-family: 'Poppins', sans-serif;
-		 font-weight: 600;
+		 font-weight: 400;
 		 font-size:50px;
 		 position: relative;
 		 padding:30px;
 		 white-space: nowrap;
 		 &:before, &:after {
-				content:'Choose';
+				content:'Choose topics';
 				color:#fff;
 				position: absolute;
 				top:0;
@@ -72,12 +72,12 @@ $url_0: url(../../img/right-arrow.png);
 		 }
 		 &:before {
 				left:3px;
-				text-shadow: -3px 0 red;
+				text-shadow: -3px 0 #fc0f47;
 				animation: glitch-before 2s linear 0s infinite alternate;
 		 }
 		 &:after {
 				left:-3px;
-				text-shadow: -3px 0 blue;
+				text-shadow: -3px 0 #0f47fc;
 				animation: glitch-after 2s linear 0s infinite alternate;
 		 }
 }

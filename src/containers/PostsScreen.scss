@@ -20,6 +20,12 @@
       max-height: calc(100vh - 80px);
     }
   }
+  h3 {
+    color: white;
+  }
+  a {
+    color: #fc0f47;
+  }
   ul {
     list-style: none;
     padding-left: 0;
@@ -43,6 +49,7 @@
       padding: 10px;
       margin: 0;
       font-size: 16px;
+      color: white;
     }
   }
   .HeaderBar {
@@ -59,6 +66,9 @@
       color: blue;
       text-decoration: none;
       &.selected {
+        color: #fc0f47;
+      }
+      &.unselected {
         color: grey;
       }
     }

@@ -63,7 +63,7 @@ class PostsScreen extends Component {
 
   renderRow(postId, post) {
     const selected = this.props.currentPost === post;
-    const color = selected ? 'black' : 'white';
+    const color = 'white';
 
     return (
       <ListRow
