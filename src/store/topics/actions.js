@@ -30,13 +30,11 @@ export function selectTopic(topicUrl) {
     if (_.indexOf(selectedTopics, topicUrl) !== -1) {
       newSelectedTopics = _.without(selectedTopics, topicUrl);
     } else {
-      newSelectedTopics = selectedTopics.length < 3 ?
-        selectedTopics.concat(topicUrl) :
-        selectedTopics.slice(1).concat(topicUrl);
+      newSelectedTopics = selectedTopics.concat(topicUrl);
     }
     dispatch({ type: types.TOPICS_SELECTED, selectedTopicUrls: newSelectedTopics  });
     // optimization - prefetch the posts before going to the posts screen
-    if (newSelectedTopics.length === 3) {
+    if (newSelectedTopics.length > 0) {
       dispatch(postActions.fetchPosts());
     }
   };

@@ -54,7 +54,7 @@ export function getSelectedTopicsByUrl(state) {
 }
 
 export function isTopicSelectionValid(state) {
-  return state.topics.selectedTopicUrls.length === 3;
+  return state.topics.selectedTopicUrls.length > 0;
 }
 
 export function isTopicSelectionFinalized(state) {
